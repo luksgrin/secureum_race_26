@@ -1,0 +1,9 @@
+[submodule "lib/forge-std"]
+	path = lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "lib/create-util"]
+	path = lib/create-util
+	url = https://github.com/pcaversaccio/create-util
+[submodule "lib/create2deployer"]
+	path = lib/create2deployer
+	url = https://github.com/pcaversaccio/create2deployer
