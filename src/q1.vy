@@ -1,8 +1,3 @@
-# Secureum RACE 26
-
-# [Q1] Given the following Vyper contract, which of the following statements are true?
-
-```python
 # @version 0.3.0
 
 """A simple vault contract
@@ -55,14 +50,3 @@ def withdrawAll():
 @view
 def getBalance() -> uint256:
     return self.balance
-```
-
-- (A) The contract is vulnerable to reentrancy attacks
-- (B) The contract is vulnerable to denial of service attacks
-- (C) The contract is vulnerable to overflow attacks
-- (D) None of the above
-
-**Solution**: A
-
-The contract is vulnerable to reentrancy attacks, in particular, cross-function re-entrancy (between `transfer` and `withdrawAll`).
-Although the contract uses the `nonreentrant` decorator with the key `"withdraw"`, given that the vyper version is 0.3.0, the lock does not protect against cross-function re-entrancy. See https://github.com/vyperlang/vyper/security/advisories/GHSA-5824-cm3x-3c38
