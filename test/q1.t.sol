@@ -45,7 +45,7 @@ contract Attack {
 
 }
 
-contract QTest is Test, DeployQ1 {
+contract Q1Test is Test, DeployQ1 {
     Q1 public q1;
     Attack public attack1;
     Attack public attack2;
